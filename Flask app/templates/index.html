@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="{{ url_for('static', filename='css/main.css') }}", rel="stylesheet">
+
+</head>
+
+<body>
+<div class='navbar'>
+<b>We Care About Our Employees:)<b>
+<a href="{{url_for('stats')}}">Stats</a>
+<a href="{{url_for('about')}}" >About</a>
+<a href="{{url_for('home')}}">Home</a>
+
+</div>
+<div class='pred'>
+<form action="/login" method="post">
+<h1 style="font-size:25px; padding-top:35px; color:white;">Know the future of your company!</h1>
+
+<span><label for="Business Travel">Choose an option</label>
+<select name='bt'>
+<option value="Travel_Rarely">Travel Rarely</option>
+<option value="Travel_Frequently">Travel_Frequently</option>
+<option value="Non-Travel">Non-Travel</option>
+</select></span>
+<span><label for="Department">Department</label>
+<select name='dept'>
+<option value="Sales">Sales</option>
+<option value="Research & Development">Research & Development</option>
+<option value="Human Resources">Human Resources</option>
+</select></span>
+<span><label for="Gender">Gender</label>
+<select name='gender'>
+<option value="Male">Male</option>
+<option value="Female">Female</option>
+</select></span>
+<span><label for="Marital Status">Marital Status</label>
+<select name='ms'>
+<option value="Single">Single</option>
+<option value="Married">Married</option>
+<option value="Divorced">Divorced</option>
+</select></span>
+<span><label for="Over Time">Over Time</label>
+<select name='ot'>
+<option value="Yes">Yes</option>
+<option value="No">No</option>
+</select></span>
+<span><label for="Performance Rating">Performance Rating</label>
+<select name='pr'>
+<option value="3">***</option>
+<option value="4">****</option>
+</select><span>
+<span><p>Age of the employee</p>
+<p><input type='text' name='age'/></p></span>
+<span><p>Distance from home</p>
+<p><input type='text' name='distance'/></p></span>
+<span><p>Monthly Income</p>
+<p><input type='text' name='income'/></p></span>
+<span><p>Percent Salary Hike</p>
+<p><input type='text' name='percent'/></p></span>
+<span><p>Total Working Years</p>
+<p><input type='text' name='totalworkyear'/></p></span>
+<span><p>Years at company</p>
+<p><input type='text' name='years'/></p></span>
+<span><p>Years Since Last Promotion</p>
+<p><input type='text' name='promote'/></p></span>
+<span><p>Environment Satisfaction</p>
+<p>1<input type='range' min=1 max=4 name='es' value=1 step=1/>4</p></span>
+<span><p>Job Satisfaction</p>
+<p>1<input type='range' min=1 max=4 name='js' value=1 step=1/>4</p></span>
+<span><p>Relationship Satisfaction</p>
+<p>1<input type='range' min=1 max=4 name='rs' value=1 step=1/>4</p></span>
+
+<p><input type='submit' value='Click Here!'/></p>
+<b>{{y}}</b>
+</form>
+
+</div>
+</body>
+</html>
